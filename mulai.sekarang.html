@@ -8,14 +8,15 @@
 </head>
 <body class="bg-gray-50 font-sans">
 
+<div class="flex-1"></div>
+
   <div class="max-w-3xl mx-auto py-10 px-6">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Cara Kerja</h1>
     <ol class="list-decimal pl-5 space-y-3 text-gray-700">
       <!--<li>Daftar sebagai pekerja melalui form pendaftaran.</li>-->
       <li>Tambahkan email ke daftar di bawah, lalu klik tombol Kirim Semua.</li>
       <li>Dapatkan bayaran per akun valid yang berhasil dikirim.</li>
-      <li>Dibayar harian, Setor hari ini ditransfer keesokan harinya.</li>
-      <li>Nama, jenis kelamin, Tgl lahir bebas semua</li>
+      <li>Dibayar harian, Setor hari ini transfer keesokan harinya.</li>
       <li>Password Wajib ( Karawang04 ) "K" besar</li>
       <li>Jangan Verifikasi Nomor Telepon!</li>
     </ol>
@@ -59,16 +60,6 @@
       <button id="submitAll" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Kirim Semua</button>
     </div>
   </div>
-
-  <!-- Footer otomatis dari footer.html -->
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('wm/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
 
   <!-- Script Email + Kirim ke Telegram -->
   <!-- ... HTML atas tetap sama, hanya bagian JS di bawah ini yang fix ... -->
@@ -190,3 +181,20 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 </script>
+
+  </div>
+  
+  <!-- Kontak WhatsApp -->
+<div class="mt-10 text-center text-sm text-gray-700">
+  Jika ada pertanyaan, silakan <a href="https://wa.me/6282155498976" target="_blank" class="text-green-600 font-semibold hover:underline">hubungi WhatsApp kami.</a>
+</div>
+</body>
+  <!-- Footer otomatis dari footer.html -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('wm/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
