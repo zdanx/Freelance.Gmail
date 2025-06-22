@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menunggu Pembayaran</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-white min-h-screen flex flex-col font-sans"
+  >
+    <!-- Konten utama -->
+    <main class="flex-grow flex items-center justify-center px-4">
+      <div
+        class="bg-white shadow-xl rounded-2xl p-8 max-w-lg w-full text-center border border-blue-100"
+      >
+        <!-- Icon / Ilustrasi -->
+        <div class="mb-6">
+          <svg
+            class="mx-auto h-16 w-16 text-blue-400"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"
+            />
+          </svg>
+        </div>
+
+        <!-- Judul -->
+        <h1 class="text-2xl font-semibold text-gray-800 mb-2">
+          Terima kasih! 🙏
+        </h1>
+
+        <!-- Deskripsi -->
+        <p class="text-gray-600 mb-4">
+          Email Anda berhasil diterima. Pembayaran akan diproses dalam waktu
+          maksimal
+          <span class="font-semibold text-gray-800">1x24 jam</span> ke akun DANA
+          yang Anda masukkan.
+        </p>
+
+        <!-- Info tambahan -->
+        <div class="bg-blue-50 text-blue-700 text-sm rounded-lg p-3 mb-4">
+          ⏳ Harap tunggu dengan sabar, sistem kami sedang memproses pembayaran
+          Anda.
+        </div>
+
+        <!-- Bantuan -->
+        <p class="text-sm text-gray-500">
+          Jika mengalami kendala atau pertanyaan, silakan hubungi admin melalui
+          <a href="https://wa.me/6282155498976" class="underline text-blue-500"
+            >WhatsApp</a
+          >.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      id="footer-placeholder"
+      class="text-center text-gray-400 text-xs py-4 mt-auto"
+    ></footer>
+
+    <!-- Fetch footer -->
+    <script>
+      fetch("wm/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
