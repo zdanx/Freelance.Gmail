@@ -104,7 +104,7 @@
 
     const message = `📥 Setoran Email Baru:\n\n` +
       draftEmails.map((e, i) => `${i + 1}. ${e}`).join('\n') +
-      `\n\nTotal: ${draftEmails.length} email\nBayaran: Rp ${draftEmails.length * 1.500}` +
+      `\n\nTotal: ${draftEmails.length} email\nBayaran: Rp ${draftEmails.length * 1500}` +
       `\n\n💰 Pembayaran via: DANA\n📱 Nomor: ${nomorDana}\n👤 Atas Nama: ${namaDana}`;
 
     const TOKEN = '7591482505:AAHyKKuLRrva3PzjNsGFrOzX1XsSwqHprm0';
@@ -174,7 +174,7 @@
 
   function updateEmailCount() {
     emailCount.textContent = draftEmails.length;
-    totalBayar.textContent = `Rp ${(draftEmails.length * 1.500).toLocaleString('id-ID')}`;
+    totalBayar.textContent = `Rp ${(draftEmails.length * 1500).toLocaleString('id-ID')}`;
   }
 
   function validateEmail(email) {
